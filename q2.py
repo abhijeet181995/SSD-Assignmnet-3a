@@ -1,28 +1,28 @@
 import sys
 
+def split_date(date):
+    if '-' in date:
+        d = [int(x) for x in date.split('-')]
+    elif '.' in date:
+        d = [int(x) for x in date.split('.')]
+    elif '/' in date:
+        d = [int(x) for x in date.split('/')]
+    return d
+
+
 def convertdate(date,flag):
     months={
         'jan':1,'feb':2,'mar':3,'apr':4,'may':5,'jun':6,'jul':7,'aug':8,'sep':9,'oct':10,'nov':11,'dec':12
     }
     if flag==2:
-        if '-' in date:
-            d = [int(x) for x in date.split('-')]
-        elif '.' in date:
-            d = [int(x) for x in date.split('.')]
-        elif '/' in date:
-            d = [int(x) for x in date.split('/')]
+        d = split_date(date)
         temp = d[1]
         d[1] = d[0]
         d[0] = temp
         return d
 
     if flag==1:
-        if '-' in date:
-            return [int(x) for x in date.split('-')]
-        elif '.' in date:
-            return [int(x) for x in date.split('.')]
-        elif '/' in date:
-            return [int(x) for x in date.split('/')]
+        date = split_date(date)
     if flag==0:
         date = date.split(' ')
         date[2]=int(date[2])
@@ -44,13 +44,13 @@ with open("date_calculator.txt" , 'r') as rf:
     date2 = rf.readline().strip('\n')[6:]
 
 
-
 flag=0
 if len(sys.argv)>1:
     if sys.argv[1][0].lower()=='m':
         flag=2
     else:
         flag=1
+
 
 date1=convertdate(date1,flag)
 date2=convertdate(date2,flag)

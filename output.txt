@@ -1,4 +1,1 @@
-Employee1:["9:00AM-10:00AM", "10:20AM-12:30AM", "3:00PM-3:45PM", "4:00PM-4:30PM"]
-Employee2:["10:20AM-12:30AM", "3:00PM-3:45PM", "4:00PM-4:30PM"]
-Slot Duration:3.0 hrs 
-{"5/10/2020": "No Available slots"}
+Date Differrence:2158 Day
