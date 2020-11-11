@@ -2,8 +2,6 @@
 
 Github Repo Link - [https://github.com/abhijeet181995/SSD-Assignmnet-3a/tree/PartC]
 
-Commit File Change for Detailed File Difference [https://github.com/abhijeet181995/SSD-Assignmnet-3a/pull/1/files]
-
 ## Question 1
 
 - Name is assumed to be the employee id (001-999)
